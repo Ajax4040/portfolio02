@@ -1,0 +1,234 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+    background-color: darkgray;
+}
+
+a{
+	text-decoration:none;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    display: grid;
+	grid-template-rows:1fr 1fr 0.3fr;
+    grid-template-areas: 
+	"header"
+    "main"
+    "footer";
+}
+
+header{
+    position: relative;
+    grid-area: header;
+    height: 100vh;
+    width: 100%;
+}
+
+.nav1{
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    display: grid;
+	grid-template-columns:0.5fr 1.5fr;
+	align-items: center;
+	grid-template-areas: 
+	"logo botones";
+}
+
+.logo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.logo img{
+	grid-area: logo;
+	width: 20%;
+}
+
+.botones{
+    width: 100%;
+    height: 100%;
+	grid-area: botones;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.botones a{
+    margin-right: 5%;
+    letter-spacing: 3px;
+    color: #fff;
+    font-family: calibri;
+    text-align: center;
+}
+
+.presentacion{
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    animation: scroll 120s linear infinite;
+    background: url("../images/fondo2.jpg"), #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
+@keyframes scroll {
+    100%{
+     background-position:0px -3000px;
+   }
+ }
+ 
+ @media (prefers-reduced-motion) {
+   .wrapper {
+     animation: scroll 200s linear infinite;
+   }
+ }
+ 
+.titulo{
+    color: #fff;
+    font-family: calibri;
+}
+
+main{
+    grid-area: main;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+footer{
+    grid-area: footer;
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 2561px){
+	.nav2, .secciones2{
+		display: none;
+	}
+
+    .nav-responsive__checkbox{
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 500px){
+    .botones a{
+    margin-right: 3%;
+    letter-spacing: 2px;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .nav1{
+        display: none;
+    }
+
+    body{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows:1fr 1fr 0.3fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+    
+    header{
+        position: relative;
+        grid-area: header;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .nav2{
+		height: 15%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "logo icono";
+		align-items: center;
+		position: fixed;
+        top: 2px;
+        z-index: 100;
+	}
+
+    .nav2__logo{
+        grid-area: logo;
+        padding-left: 10%;
+        padding-top: 3%;
+    }
+    
+    .nav2__logo img{
+        width: 20%;
+    }
+    
+    .nav2__icono{
+        grid-area: icono;
+    }
+
+    .nav2__icono img{
+        width: 20%;
+        float: right;
+		margin-right: 10%;
+		border-radius: 10px;
+    }
+
+    .secciones2{
+        height: 80%;
+        width: 100%;
+        z-index: 60;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.46);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.3px);
+        -webkit-backdrop-filter: blur(5.3px);
+        border: 1px solid rgba(0, 0, 0, 0.16);
+        transform: translateX(-100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 20% 0 20% 0;
+        padding: 2%;
+        border: 7px solid black;
+    }
+
+    .secciones2 a{
+		font-size: 150%;
+		color: #fff;
+		font-family: calibri;
+		font-weight: 900;
+		letter-spacing: 2px;
+		padding: 4% 0% 0% 1%;
+		margin-top: 5%;
+		text-shadow: 3px 3px 5px rgba(83,23,140,1);
+	}
+    
+    .nav-responsive__checkbox:checked + .secciones2{/*EL + FUNCIONA SOLO SI LA SEGUNDA CAJA
+		VA A CONTINUACION DE LA PRIMERA EN EL HTML*/
+		transform: translateX(0%);
+	}
+}
+
