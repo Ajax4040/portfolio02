@@ -238,29 +238,42 @@ h3{
 
 .contenedor__about-me{
     width: 100%;
-    height: 40%;
+    height: 35%;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(67,20,111,1) 25%, rgba(83,26,138,1) 45%, rgba(83,23,140,1) 50%, rgba(83,26,138,1) 55%, rgba(67,20,111,1) 75%, rgba(0,0,0,1) 100%);
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }   
 
 .contenedor__about-me h3{
     width: 60%;
     height: 100%;
-    padding: 10% 5% 5% 5%;
+    padding: 5%;
     font-family: calibri;
     letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
     font-size: 100%;
     overflow:auto;
+    align-items: center;
     text-align: right;
     text-shadow: 3px 0px 5px #2695ff;
 }
 
 .img-about{
-    width: 40%;
+    width: 35%;
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-about img{
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #000,6px 6px 10px #00000065;;
 }
 
 .contenedor__skills{
@@ -299,13 +312,43 @@ footer{
 	}
 }
 
+@media only screen and (max-width: 1441px){
+    .titulo .primario {
+        font-size: 8vw;
+    }
+    
+    .titulo .secundario {
+        font-size: 6vw;
+    }
+
+    .imagen-perfil img{
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 769px){
+    .logo img{  
+        padding-top: 10%;
+    }
+
+    .imagen-perfil img{
+        width: 70%;
+    }
+
+    .contenedor__about-me h3{
+        width: 60%;
+        font-size: 80%;
+    }
+
+    .img-about img{
+        width: 80%;
+    }
+}
+
 @media only screen and (max-width: 500px){
     .botones a{
     margin-right: 3%;
     letter-spacing: 2px;
-    }
-    .logo img{  
-        padding-top: 10%;
     }
 }
 
@@ -445,17 +488,28 @@ footer{
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+        padding: 10% 2% 5% 2%;
+        overflow: hidden;
     }   
     
     .contenedor__about-me h3{
         width: 100%;
-        height: 70%;
-        padding: 10% 5% 5% 5%;
+        height: 95%;
         font-family: calibri;
         letter-spacing: 2px;
-        font-size: 100%;
+        font-size: 60%;
         overflow:auto;
         text-align: center;
+        padding-top: 8%;
     }
     
+    .img-about{
+        width: 100%;
+        height: 100%;
+        padding-bottom: 10%;
+    }
+
+    .img-about img{
+        width: 60%;
+    }
 }
