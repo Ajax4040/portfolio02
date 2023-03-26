@@ -436,7 +436,7 @@ h3{
 }
 .imagen_fondo2{
     width:60%; height:78%;
-    background-image: url(../images/construction.gif);
+    background-image: url(../images/construction2.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -763,5 +763,14 @@ footer{
     .works-h2{
         justify-content: center;
     }
-    
+
+    .imagen_fondo{
+        width:50%; height:80%;
+    }
+
+    .imagen_fondo2{
+        width:50%; height:80%;
+        background-image: url(../images/construction2.gif);
+    }
+ 
 }
