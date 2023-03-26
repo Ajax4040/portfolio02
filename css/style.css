@@ -286,6 +286,7 @@ h3{
     border-radius: 5px;
     box-shadow: 3px 3px 5px #000,6px 6px 10px #00000065;
     border: #000 solid 3px;
+    border-radius: 10px;
 }
 
 /*----------------------------SKILLS---------------------------*/
@@ -436,7 +437,7 @@ h3{
 }
 .imagen_fondo2{
     width:60%; height:78%;
-    background-image: url(../images/construction2.gif);
+    background-image: url(../images/construction.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -591,7 +592,7 @@ footer{
         width: 100%;
         height: 100%;
         display: grid;
-        grid-template-rows:1fr 2fr 0.3fr;
+        grid-template-rows:1fr 3fr 0.3fr;
         grid-template-areas: 
         "header"
         "main"
@@ -718,7 +719,7 @@ footer{
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        padding: 10% 2% 5% 2%;
+        padding: 5% 2% 5% 2%;
         overflow: hidden;
     }   
     
@@ -744,6 +745,7 @@ footer{
     }
 
     .contenedor__skills{
+        height: 80vh;
         padding: 5%;
         font-size: 80%;
     }
@@ -751,7 +753,7 @@ footer{
     .contenedor__works{
         padding: 6% 2% 2% 2%;
         width: 100%;
-        height: 100vh;
+        height: 80vh;
         display: grid;
         grid-template-rows:0.1fr 0.4fr 0.4fr;
         grid-template-areas: 
@@ -765,11 +767,11 @@ footer{
     }
 
     .imagen_fondo{
-        width:50%; height:80%;
+        width:50%; height:70%;
     }
 
     .imagen_fondo2{
-        width:50%; height:80%;
+        width:50%; height:70%;
         background-image: url(../images/construction2.gif);
     }
  
