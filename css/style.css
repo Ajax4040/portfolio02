@@ -25,6 +25,9 @@ body{
     "footer";
 }
 
+/*------------------------------HEADER------------------------------*/
+/*------------------------------------------------------------------*/
+
 header{
     position: relative;
     grid-area: header;
@@ -224,6 +227,9 @@ header{
     }
 }
 
+/*-------------------------------MAIN-------------------------------*/
+/*------------------------------------------------------------------*/
+
 main{
     grid-area: main;
     width: 100%;
@@ -239,6 +245,8 @@ main{
 h3{
     color: #fff;
 }
+
+/*---------------------------ABOUT ME--------------------------*/
 
 .contenedor__about-me{
     width: 100%;
@@ -279,6 +287,8 @@ h3{
     box-shadow: 3px 3px 5px #000,6px 6px 10px #00000065;
     border: #000 solid 3px;
 }
+
+/*----------------------------SKILLS---------------------------*/
 
 .contenedor__skills{
     width: 100%;
@@ -323,21 +333,172 @@ h3{
 }
   
 .cajitas-skills img{
-    height: 20%;
+    height: 70%;
 }
-  
+
+/*----------------------------WORKS----------------------------*/
+
 .contenedor__works{
+    padding: 8% 3% 3% 3%;
     width: 100%;
-    height: 20%;
+    height: 80vh;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(67,20,111,1) 25%, rgba(83,26,138,1) 45%, rgba(83,23,140,1) 50%, rgba(83,26,138,1) 55%, rgba(67,20,111,1) 75%, rgba(0,0,0,1) 100%);
+    display: grid;
+    grid-template-rows:0.1fr 0.9fr;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-areas: 
+	"h3 balnco"
+    "cem construction";
 }
+
+.works-h2{
+    grid-area: h3;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.works-cem1{
+    grid-area: cem;
+    width:100%; 
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(3px 3px 5px #2695ff);
+}
+
+.imagen_fondo{
+    width:60%; height:78%;
+    background-image: url(../images/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.imagen_fondo .deroul_titre{
+    position: absolute;
+    text-transform: uppercase;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 7px;
+    z-index: 1000;
+    top:60%;left:-80%;
+    color:#ffffff;
+    font-weight: 300;
+    font-size: 13px; width: 80%;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    transition: all 0.7s;
+    border-radius: 5px;
+}
+
+.imagen_fondo:hover .deroul_titre{
+    background-color:rgba(83,23,140,1); left:0px;
+}
+
+.imagen_fondo .deroul_soustitre{
+    position: absolute;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 5px;
+    z-index: 1000;
+    top:60%;right:-85%;
+    margin-top: 25px;
+    color:#ffffff;
+    font-weight: 300;
+    font-size: 11px; width: 80%;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+.imagen_fondo:hover .deroul_soustitre{
+    background-color:rgba(128, 35, 214, 0.712);right:0px;
+}
+
+.works-cem2{
+    grid-area: construction;
+    width:100%; 
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(3px 3px 5px #2695ff);
+}
+.imagen_fondo2{
+    width:60%; height:78%;
+    background-image: url(../images/construction.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    padding: 3%;
+}
+
+.imagen_fondo2 .deroul_titre{
+    position: absolute;
+    text-transform: uppercase;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 7px;
+    z-index: 1000;
+    top:60%;left:-80%;
+    color:#ffffff;
+    font-weight: 300;
+    font-size: 13px; width: 80%;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    transition: all 0.7s;
+    border-radius: 5px;
+}
+
+.imagen_fondo2:hover .deroul_titre{
+    background-color:rgba(83,23,140,1); left:0px;
+  
+}
+
+.imagen_fondo2 .deroul_soustitre
+{
+    position: absolute;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 5px;
+    z-index: 1000;
+    top:60%;right:-85%;
+    margin-top: 25px;
+    color:#ffffff;
+    font-weight: 300;
+    font-size: 11px; width: 80%;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+.imagen_fondo2:hover .deroul_soustitre{
+    background-color:rgba(128, 35, 214, 0.712);right:0px;
+}
+
+/*---------------------------CONTACT---------------------------*/
 
 .contenedor__contact{
     width: 100%;
     height: 10%;
     background-color: #000;
 }
+
+/*------------------------------FOOTER------------------------------*/
+/*------------------------------------------------------------------*/
 
 footer{
     grid-area: footer;
@@ -346,6 +507,10 @@ footer{
     background-color: grey;
 }
 
+/*--------------------------------Media queries--------------------------------*/
+/*-----------------------------------------------------------------------------*/
+
+/*----------------Pantalla 3000px----------------*/
 @media only screen and (max-width: 3000px){
 	.nav2, .secciones2{
 		display: none;
@@ -356,6 +521,7 @@ footer{
 	}
 }
 
+/*----------------Pantalla 1441px----------------*/
 @media only screen and (max-width: 1441px){
     .titulo .primario {
         font-size: 8vw;
@@ -370,6 +536,7 @@ footer{
     }
 }
 
+/*----------------Pantalla 769px----------------*/
 @media only screen and (max-width: 769px){
     .logo img{  
         padding-top: 10%;
@@ -379,6 +546,10 @@ footer{
         width: 70%;
     }
 
+    .contenedor__about-me{
+        width: 100%;
+        height: 80vh;
+    }
     .contenedor__about-me h3{
         width: 60%;
         font-size: 80%;
@@ -387,8 +558,22 @@ footer{
     .img-about img{
         width: 80%;
     }
+
+    .contenedor__works{
+        padding: 10% 2% 2% 2%;
+        height: 60vh;
+    }
+
+    .imagen_fondo{
+        width:60%; height:50%;
+    }
+
+    .imagen_fondo2{
+        width:60%; height:50%;
+    }
 }
 
+/*----------------Pantalla 500px----------------*/
 @media only screen and (max-width: 500px){
     .botones a{
     margin-right: 3%;
@@ -396,6 +581,7 @@ footer{
     }
 }
 
+/*----------------Pantalla 425px----------------*/
 @media only screen and (max-width: 425px){
     .nav1, .imagen-perfil{
         display: none;
@@ -501,28 +687,28 @@ footer{
 
     .wrapper {
         animation: scroll 200s linear infinite;
-      }
+    }
     
     .titulo {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-      }
+    }
 
     .titulo .primario {
         width: 100%;
         padding-left: 0%;
         font-size: 18vw;
         text-align: center;
-      }
+    }
 
     .titulo .secundario {
         width: 100%;
         padding-left: 0%;
         font-size: 14vw;
         text-align: center;
-      }
+    }
 
     .contenedor__about-me{
         width: 100%;
@@ -562,5 +748,20 @@ footer{
         font-size: 80%;
     }
 
+    .contenedor__works{
+        padding: 6% 2% 2% 2%;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-rows:0.1fr 0.4fr 0.4fr;
+        grid-template-areas: 
+        "h3 h3"
+        "cem cem"
+        "construction construction";
+    }
+    
+    .works-h2{
+        justify-content: center;
+    }
     
 }
