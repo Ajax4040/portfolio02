@@ -545,6 +545,24 @@ footer{
     }
 }
 
+/*----------------Pantalla 1024px----------------*/
+@media only screen and (max-width: 1025px){
+
+    .img-about{
+        padding: 5%;
+        width: 50%;
+    }
+
+    .imagen_fondo{
+        width:50%; height:50%;
+    }
+
+    .imagen_fondo2{
+        width:50%; height:50%;
+    }
+}
+
+
 /*----------------Pantalla 769px----------------*/
 @media only screen and (max-width: 769px){
     .logo img{  
@@ -558,9 +576,9 @@ footer{
     .contenedor__about-me{
         width: 100%;
         height: 80vh;
+        overflow: scroll;
     }
     .contenedor__about-me h3{
-        width: 60%;
         font-size: 80%;
     }
 
@@ -757,6 +775,9 @@ footer{
         width: 100%;
         height: 100%;
         padding-bottom: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
     }
 
     .img-about img{
