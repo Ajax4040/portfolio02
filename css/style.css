@@ -315,6 +315,7 @@ h3{
     align-items: center;
     color: #fff;
     font-family: 'Rajdhani', sans-serif;
+    margin-top: 2%;
 }
 
 .barra{
@@ -770,7 +771,7 @@ footer{
         width: 100%;
         height: 100%;
         display: grid;
-        grid-template-rows:1fr 3fr 0.2fr;
+        grid-template-rows:1fr 3fr 0.1fr;
         grid-template-areas: 
         "header"
         "main"
@@ -936,20 +937,20 @@ footer{
 
     .contenedor__skills{
         height: 50vh;
-        padding: 5%;
         font-size: 80%;
+        margin-bottom: 4%;
     }
 
     .barra{
-        box-shadow: 0 0 5px rgb(137, 40, 228), 0 0 15px rgb(137, 40, 228), 0 0 25px rgb(137, 40, 228);
+        box-shadow: 0 0 5px rgb(137, 40, 228), 0 0 10px rgb(137, 40, 228), 0 0 15px rgb(137, 40, 228);
     }
-    
+
     .cajitas-skills h2{
-        text-shadow: 0 0 0 transparent, 0 0 5px #2695ff, 0 0 15px rgba(38, 149, 255, 0.5), 0 0 25px #2695ff;
+        text-shadow: 0 0 0 transparent, 0 0 5px #2695ff, 0 0 10px rgba(38, 149, 255, 0.5), 0 0 15px #2695ff;
     }
     
     .h3{
-        text-shadow: 0 0 0 transparent, 0 0 5px #2695ff, 0 0 15px rgba(38, 149, 255, 0.5), 0 0 25px #2695ff;
+        text-shadow: 0 0 0 transparent, 0 0 5px #2695ff, 0 0 10px rgba(38, 149, 255, 0.5), 0 0 15px #2695ff;
     }
     .contenedor__works{
         padding: 6% 2% 2% 2%;
